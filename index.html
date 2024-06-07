@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="index.css" />
+  <title>Tic Tac Toe</title>
+</head>
+<body>
+  <header> 
+    <h1 class="page-title">Tic-Tac-Toe</h1>
+  </header>
+      
+  <main>
+    <section>
+      <div class="message-displays"><span id="win-message" class="win-message"></span></div>
+      <div class="message-displays"><span id="turn" class="turn-message"></span></div>
+    </section>
+
+    <section class="main-section">
+      <div class="player-one-scoreboard">Player One:
+        <span class="player-symbol">(X)</span> 
+        <span id="player-one-score" class="player-score">0</span>
+      </div>
+      <div class="main-grid"> 
+        <div class="grid-1"><button class="game-buttons" id="top-left"></button></div>
+        <div class="grid-2"><button class="game-buttons" id="top-centre"></button></div>
+        <div class="grid-3"><button class="game-buttons" id="top-right"></button></div>
+        <div class="grid-4"><button class="game-buttons" id="mid-left"></button></div>
+        <div class="grid-5"><button class="game-buttons" id="mid-centre"></button></div>
+        <div class="grid-6"><button class="game-buttons" id="mid-right"></button></div>
+        <div class="grid-7"><button class="game-buttons" id="bottom-left"></button></div>
+        <div class="grid-8"><button class="game-buttons" id="bottom-centre"></button></div>
+        <div class="grid-9"><button class="game-buttons" id="bottom-right"></button></div>
+      </div>
+      <div class="player-two-scoreboard">Player Two: 
+        <span class="player-symbol">(O)</span>
+        <span id="player-two-score" class="player-score">0</span>
+      </div>
+    </section>
+    <section class="reset-section">
+      <button class="reset-button" id="reset-button">Reset Scores</button>
+    </section>
+  </main>
+  <footer></footer>
+  <script src="./index.js"></script>
+</body>
+</html>
