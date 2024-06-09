@@ -36,8 +36,73 @@ const gameDrawn = 'This Game Is a Draw. No Points awarded.'
 // Define constants for player names
 const playerOne = 'Player One';
 const playerTwo = 'Player Two';
-const playerOneSymbol = 'X'
-const playerTwoSymbol = 'O'
+let playerOneSymbol = 'X'
+let playerTwoSymbol = 'O'
+
+const symbolOnePlayerOne = document.getElementById('symbol-one-p1');
+const symbolTwoPlayerOne = document.getElementById('symbol-two-p1');
+const symbolThreePlayerOne = document.getElementById('symbol-three-p1');
+const symbolFourPlayerOne = document.getElementById('symbol-four-p1');
+const symbolFivePlayerOne = document.getElementById('symbol-five-p1');
+const symbolSixPlayerOne = document.getElementById('symbol-six-p1');
+const symbolSevenPlayerOne = document.getElementById('symbol-seven-p1');
+const symbolEightPlayerOne = document.getElementById('symbol-eight-p1');
+const symbolNinePlayerOne = document.getElementById('symbol-nine-p1');
+const symbolTenPlayerOne = document.getElementById('symbol-ten-p1')
+const symbolElevenPlayerOne = document.getElementById('symbol-eleven-p1')
+const symbolTwelvePlayerOne = document.getElementById('symbol-twelve-p1')
+
+const symbolOnePlayerTwo = document.getElementById('symbol-one-p2');
+const symbolTwoPlayerTwo = document.getElementById('symbol-two-p2');
+const symbolThreePlayerTwo = document.getElementById('symbol-three-p2');
+const symbolFourPlayerTwo = document.getElementById('symbol-four-p2');
+const symbolFivePlayerTwo = document.getElementById('symbol-five-p2');
+const symbolSixPlayerTwo = document.getElementById('symbol-six-p2');
+const symbolSevenPlayerTwo = document.getElementById('symbol-seven-p2');
+const symbolEightPlayerTwo = document.getElementById('symbol-eight-p2');
+const symbolNinePlayerTwo = document.getElementById('symbol-nine-p2');
+const symbolTenPlayerTwo = document.getElementById('symbol-ten-p2')
+const symbolElevenPlayerTwo = document.getElementById('symbol-eleven-p2')
+const symbolTwelvePlayerTwo = document.getElementById('symbol-twelve-p2')
+
+symbolOnePlayerOne.addEventListener('click', () => {playerOneSymbol = 'X'})
+symbolTwoPlayerOne.addEventListener('click', () => {playerOneSymbol = 'O'})
+symbolThreePlayerOne.addEventListener('click', () => {playerOneSymbol = '👻'})
+symbolFourPlayerOne.addEventListener('click', () => {playerOneSymbol = '❤️'})
+symbolFivePlayerOne.addEventListener('click', () => {playerOneSymbol = '☆'})
+symbolSixPlayerOne.addEventListener('click', () => {playerOneSymbol = '🥷'})
+symbolSevenPlayerOne.addEventListener('click', () => {playerOneSymbol = '👽'})
+symbolEightPlayerOne.addEventListener('click', () => {playerOneSymbol = '🧟‍♂️'})
+symbolNinePlayerOne.addEventListener('click', () => {playerOneSymbol = '🙀'})
+symbolTenPlayerOne.addEventListener('click', () => {playerOneSymbol = '💩'})
+symbolElevenPlayerOne.addEventListener('click', () => {playerOneSymbol = '😼'})
+symbolTwelvePlayerOne.addEventListener('click', () => {playerOneSymbol = '☠'})
+
+symbolOnePlayerTwo.addEventListener('click', () => {playerTwoSymbol = 'X'})
+symbolTwoPlayerTwo.addEventListener('click', () => {playerTwoSymbol = 'O'})
+symbolThreePlayerTwo.addEventListener('click', () => {playerTwoSymbol = '👻'})
+symbolFourPlayerTwo.addEventListener('click', () => {playerTwoSymbol = '❤️'})
+symbolFivePlayerTwo.addEventListener('click', () => {playerTwoSymbol = '☆'})
+symbolSixPlayerTwo.addEventListener('click', () => {playerTwoSymbol = '🥷'})
+symbolSevenPlayerTwo.addEventListener('click', () => {playerTwoSymbol = '👽'})
+symbolEightPlayerTwo.addEventListener('click', () => {playerTwoSymbol = '🧟‍♂️'})
+symbolNinePlayerTwo.addEventListener('click', () => {playerTwoSymbol = '🙀'})
+symbolTenPlayerTwo.addEventListener('click', () => {playerTwoSymbol = '💩'})
+symbolElevenPlayerTwo.addEventListener('click', () => {playerTwoSymbol = '😼'})
+symbolTwelvePlayerTwo.addEventListener('click', () => {playerTwoSymbol = '☠'})
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Initialize variables to track current player and scores
 let currentPlayer = playerOne;
@@ -59,13 +124,13 @@ function handleClick(choice, button) {
     // Update picks arrays and display 'X' or 'O' based on current player
     if (currentPlayer === playerOne) {
       playerOnePicks.push(choice);
-      button.textContent = 'X'; // Display 'X' for Player One
+      button.textContent = playerOneSymbol; // Display 'X' for Player One
       currentPlayer = playerTwo;
       displayTurn.textContent = playerTwoTurn
       // displayTurnFunction(playerTwo)
     } else if (currentPlayer === playerTwo) {
       playerTwoPicks.push(choice);
-      button.textContent = 'O'; // Display 'O' for Player Two
+      button.textContent = playerTwoSymbol; // Display 'O' for Player Two
       currentPlayer = playerOne;
       // displayTurnFunction(playerOne)
       displayTurn.textContent = playerOneTurn
