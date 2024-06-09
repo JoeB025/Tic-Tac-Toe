@@ -227,7 +227,6 @@ resetButton.addEventListener('click', () => {
 
 
 
-
 // need to add in a line for when the game finishes. 
 // the last symbol does not appear on the game board when a player wins
 // the last symbol does not appear on the game board when the game is a draw
