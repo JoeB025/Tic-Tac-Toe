@@ -167,7 +167,7 @@ function checkWinner() {
       winMessage.textContent = playerOneWinMessage
       playerOneScore++;
       playerOneScoreDisplay.textContent = playerOneScore;
-      resetGame();
+      setTimeout(resetGame, 1000);
       return 'Player One Wins';
     } 
     
@@ -178,7 +178,7 @@ function checkWinner() {
       winMessage.textContent = playerTwoWinMessage
       playerTwoScore++;
       playerTwoScoreDisplay.textContent = playerTwoScore;
-      resetGame();
+      setTimeout(resetGame, 1000);
       return 'Player Two Wins';
     }
   }
@@ -187,7 +187,7 @@ function checkWinner() {
   if (availablePicks.length === 9) {
     // alert('It\'s a draw!');
     winMessage.textContent = gameDrawn
-    resetGame();
+    setTimeout(resetGame, 1000);
   } 
   
   return null;
