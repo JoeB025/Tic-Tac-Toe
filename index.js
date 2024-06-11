@@ -65,38 +65,45 @@ const symbolTenPlayerTwo = document.getElementById('symbol-ten-p2')
 const symbolElevenPlayerTwo = document.getElementById('symbol-eleven-p2')
 const symbolTwelvePlayerTwo = document.getElementById('symbol-twelve-p2')
 
-symbolOnePlayerOne.addEventListener('click', () => {playerOneSymbol = 'X'})
-symbolTwoPlayerOne.addEventListener('click', () => {playerOneSymbol = 'O'})
-symbolThreePlayerOne.addEventListener('click', () => {playerOneSymbol = '👻'})
-symbolFourPlayerOne.addEventListener('click', () => {playerOneSymbol = '❤️'})
-symbolFivePlayerOne.addEventListener('click', () => {playerOneSymbol = '☆'})
-symbolSixPlayerOne.addEventListener('click', () => {playerOneSymbol = '🥷'})
-symbolSevenPlayerOne.addEventListener('click', () => {playerOneSymbol = '👽'})
-symbolEightPlayerOne.addEventListener('click', () => {playerOneSymbol = '🧟‍♂️'})
-symbolNinePlayerOne.addEventListener('click', () => {playerOneSymbol = '🙀'})
-symbolTenPlayerOne.addEventListener('click', () => {playerOneSymbol = '💩'})
-symbolElevenPlayerOne.addEventListener('click', () => {playerOneSymbol = '😼'})
-symbolTwelvePlayerOne.addEventListener('click', () => {playerOneSymbol = '☠'})
+// Function to update Player One's current symbol display
+function updatePlayerOneSymbolDisplay() {
+  const p1SymbolChoice = document.getElementById('current-symbol-p1');
+  p1SymbolChoice.textContent = playerOneSymbol;
+}
 
-symbolOnePlayerTwo.addEventListener('click', () => {playerTwoSymbol = 'X'})
-symbolTwoPlayerTwo.addEventListener('click', () => {playerTwoSymbol = 'O'})
-symbolThreePlayerTwo.addEventListener('click', () => {playerTwoSymbol = '👻'})
-symbolFourPlayerTwo.addEventListener('click', () => {playerTwoSymbol = '❤️'})
-symbolFivePlayerTwo.addEventListener('click', () => {playerTwoSymbol = '☆'})
-symbolSixPlayerTwo.addEventListener('click', () => {playerTwoSymbol = '🥷'})
-symbolSevenPlayerTwo.addEventListener('click', () => {playerTwoSymbol = '👽'})
-symbolEightPlayerTwo.addEventListener('click', () => {playerTwoSymbol = '🧟‍♂️'})
-symbolNinePlayerTwo.addEventListener('click', () => {playerTwoSymbol = '🙀'})
-symbolTenPlayerTwo.addEventListener('click', () => {playerTwoSymbol = '💩'})
-symbolElevenPlayerTwo.addEventListener('click', () => {playerTwoSymbol = '😼'})
-symbolTwelvePlayerTwo.addEventListener('click', () => {playerTwoSymbol = '☠'})
+// Function to update Player Two's current symbol display
+function updatePlayerTwoSymbolDisplay() {
+  const p2SymbolChoice = document.getElementById('current-symbol-p2');
+  p2SymbolChoice.textContent = playerTwoSymbol;
+}
 
+// Add event listeners to Player One's symbol choices
+symbolOnePlayerOne.addEventListener('click', () => { playerOneSymbol = 'X'; updatePlayerOneSymbolDisplay(); });
+symbolTwoPlayerOne.addEventListener('click', () => { playerOneSymbol = 'O'; updatePlayerOneSymbolDisplay(); });
+symbolThreePlayerOne.addEventListener('click', () => { playerOneSymbol = '👻'; updatePlayerOneSymbolDisplay(); });
+symbolFourPlayerOne.addEventListener('click', () => { playerOneSymbol = '❤️'; updatePlayerOneSymbolDisplay(); });
+symbolFivePlayerOne.addEventListener('click', () => { playerOneSymbol = '☆'; updatePlayerOneSymbolDisplay(); });
+symbolSixPlayerOne.addEventListener('click', () => { playerOneSymbol = '🥷'; updatePlayerOneSymbolDisplay(); });
+symbolSevenPlayerOne.addEventListener('click', () => { playerOneSymbol = '👽'; updatePlayerOneSymbolDisplay(); });
+symbolEightPlayerOne.addEventListener('click', () => { playerOneSymbol = '🧟‍♂️'; updatePlayerOneSymbolDisplay(); });
+symbolNinePlayerOne.addEventListener('click', () => { playerOneSymbol = '🙀'; updatePlayerOneSymbolDisplay(); });
+symbolTenPlayerOne.addEventListener('click', () => { playerOneSymbol = '💩'; updatePlayerOneSymbolDisplay(); });
+symbolElevenPlayerOne.addEventListener('click', () => { playerOneSymbol = '😼'; updatePlayerOneSymbolDisplay(); });
+symbolTwelvePlayerOne.addEventListener('click', () => { playerOneSymbol = '☠'; updatePlayerOneSymbolDisplay(); });
 
-
-
-
-
-
+// Add event listeners to Player Two's symbol choices
+symbolOnePlayerTwo.addEventListener('click', () => { playerTwoSymbol = 'X'; updatePlayerTwoSymbolDisplay(); });
+symbolTwoPlayerTwo.addEventListener('click', () => { playerTwoSymbol = 'O'; updatePlayerTwoSymbolDisplay(); });
+symbolThreePlayerTwo.addEventListener('click', () => { playerTwoSymbol = '👻'; updatePlayerTwoSymbolDisplay(); });
+symbolFourPlayerTwo.addEventListener('click', () => { playerTwoSymbol = '❤️'; updatePlayerTwoSymbolDisplay(); });
+symbolFivePlayerTwo.addEventListener('click', () => { playerTwoSymbol = '☆'; updatePlayerTwoSymbolDisplay(); });
+symbolSixPlayerTwo.addEventListener('click', () => { playerTwoSymbol = '🥷'; updatePlayerTwoSymbolDisplay(); });
+symbolSevenPlayerTwo.addEventListener('click', () => { playerTwoSymbol = '👽'; updatePlayerTwoSymbolDisplay(); });
+symbolEightPlayerTwo.addEventListener('click', () => { playerTwoSymbol = '🧟‍♂️'; updatePlayerTwoSymbolDisplay(); });
+symbolNinePlayerTwo.addEventListener('click', () => { playerTwoSymbol = '🙀'; updatePlayerTwoSymbolDisplay(); });
+// symbolTenPlayerTwo.addEventListener('click', () => { playerTwoSymbol = '💩'; updatePlayerTwoSymbolDisplay(); });
+symbolElevenPlayerTwo.addEventListener('click', () => { playerTwoSymbol = '😼'; updatePlayerTwoSymbolDisplay(); });
+symbolTwelvePlayerTwo.addEventListener('click', () => { playerTwoSymbol = '☠'; updatePlayerTwoSymbolDisplay(); });
 
 
 
@@ -117,6 +124,7 @@ const playerTwoPicks = [];
 // Function to handle click events on cells/buttons
 function handleClick(choice, button) {
   // Check if the cell/button has already been selected
+
   if (!availablePicks.includes(choice)) {
     // console.log(`${currentPlayer} clicked on ${choice}`);
     availablePicks.push(choice);
@@ -167,6 +175,7 @@ function checkWinner() {
       winMessage.textContent = playerOneWinMessage
       playerOneScore++;
       playerOneScoreDisplay.textContent = playerOneScore;
+      winningCombinationLine(combination)
       setTimeout(resetGame, 1000);
       return 'Player One Wins';
     } 
@@ -178,6 +187,7 @@ function checkWinner() {
       winMessage.textContent = playerTwoWinMessage
       playerTwoScore++;
       playerTwoScoreDisplay.textContent = playerTwoScore;
+      winningCombinationLine(combination)
       setTimeout(resetGame, 1000);
       return 'Player Two Wins';
     }
@@ -201,7 +211,10 @@ function resetGame() {
 
   // Reset the text content of all buttons to an empty string
   const buttons = document.querySelectorAll('.game-buttons');
-  buttons.forEach(button => button.textContent = '');
+  buttons.forEach(button => {
+    button.textContent = '';
+    button.classList.remove('winning-line');
+  });
 
   // Alternate initial player after each game
   if (playerOneScore === 0 && playerTwoScore === 0) {
@@ -224,6 +237,15 @@ resetButton.addEventListener('click', () => {
   // Reset the game board
   resetGame();
 });
+
+
+
+function winningCombinationLine(combination) {
+  combination.forEach(butter => {
+    const beans = document.getElementById(butter);
+    beans.classList.add('winning-line');
+  })
+}
 
 
 
