@@ -64,6 +64,7 @@ body {
   height: 80px;
   font-size: 30px;
   background-color: inherit;
+  border: none;
 }
 
 .game-buttons:hover {
@@ -98,12 +99,14 @@ body {
   padding-right: 100px;
 }
 
-.symbol-divider {
+.symbol-divider-p1,
+.symbol-divider-p2 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 10px;
   justify-content: space-evenly;
 }
+
 
 .icon-heading {
   text-align: center;
