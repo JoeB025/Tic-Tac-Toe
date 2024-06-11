@@ -51,6 +51,10 @@ const symbolNinePlayerOne = document.getElementById('symbol-nine-p1');
 const symbolTenPlayerOne = document.getElementById('symbol-ten-p1')
 const symbolElevenPlayerOne = document.getElementById('symbol-eleven-p1')
 const symbolTwelvePlayerOne = document.getElementById('symbol-twelve-p1')
+const symbolThirteenPlayerOne = document.getElementById('symbol-thirteen-p1')
+const symbolFourteenPlayerOne = document.getElementById('symbol-fourteen-p1')
+const symbolFifteenPlayerOne = document.getElementById('symbol-fifteen-p1')
+const symbolSixteenPlayerOne = document.getElementById('symbol-sixteen-p1')
 
 const symbolOnePlayerTwo = document.getElementById('symbol-one-p2');
 const symbolTwoPlayerTwo = document.getElementById('symbol-two-p2');
@@ -64,6 +68,10 @@ const symbolNinePlayerTwo = document.getElementById('symbol-nine-p2');
 const symbolTenPlayerTwo = document.getElementById('symbol-ten-p2')
 const symbolElevenPlayerTwo = document.getElementById('symbol-eleven-p2')
 const symbolTwelvePlayerTwo = document.getElementById('symbol-twelve-p2')
+const symbolThirteenPlayerTwo = document.getElementById('symbol-thirteen-p2')
+const symbolFourteenPlayerTwo = document.getElementById('symbol-fourteen-p2')
+const symbolFifteenPlayerTwo = document.getElementById('symbol-fifteen-p2')
+const symbolSixteenPlayerTwo = document.getElementById('symbol-sixteen-p2')
 
 // Function to update Player One's current symbol display
 function updatePlayerOneSymbolDisplay() {
@@ -80,34 +88,41 @@ function updatePlayerTwoSymbolDisplay() {
 // Add event listeners to Player One's symbol choices
 symbolOnePlayerOne.addEventListener('click', () => { playerOneSymbol = 'X'; updatePlayerOneSymbolDisplay(); });
 symbolTwoPlayerOne.addEventListener('click', () => { playerOneSymbol = 'O'; updatePlayerOneSymbolDisplay(); });
-symbolThreePlayerOne.addEventListener('click', () => { playerOneSymbol = '👻'; updatePlayerOneSymbolDisplay(); });
-symbolFourPlayerOne.addEventListener('click', () => { playerOneSymbol = '❤️'; updatePlayerOneSymbolDisplay(); });
-symbolFivePlayerOne.addEventListener('click', () => { playerOneSymbol = '☆'; updatePlayerOneSymbolDisplay(); });
+symbolThreePlayerOne.addEventListener('click', () => { playerOneSymbol = '☠'; updatePlayerOneSymbolDisplay(); });
+symbolFourPlayerOne.addEventListener('click', () => { playerOneSymbol = '☆'; updatePlayerOneSymbolDisplay(); });
+symbolFivePlayerOne.addEventListener('click', () => { playerOneSymbol = '❤️'; updatePlayerOneSymbolDisplay(); });
 symbolSixPlayerOne.addEventListener('click', () => { playerOneSymbol = '🥷'; updatePlayerOneSymbolDisplay(); });
 symbolSevenPlayerOne.addEventListener('click', () => { playerOneSymbol = '👽'; updatePlayerOneSymbolDisplay(); });
 symbolEightPlayerOne.addEventListener('click', () => { playerOneSymbol = '🧟‍♂️'; updatePlayerOneSymbolDisplay(); });
 symbolNinePlayerOne.addEventListener('click', () => { playerOneSymbol = '🙀'; updatePlayerOneSymbolDisplay(); });
 symbolTenPlayerOne.addEventListener('click', () => { playerOneSymbol = '💩'; updatePlayerOneSymbolDisplay(); });
 symbolElevenPlayerOne.addEventListener('click', () => { playerOneSymbol = '😼'; updatePlayerOneSymbolDisplay(); });
-symbolTwelvePlayerOne.addEventListener('click', () => { playerOneSymbol = '☠'; updatePlayerOneSymbolDisplay(); });
+symbolTwelvePlayerOne.addEventListener('click', () => { playerOneSymbol = '👻'; updatePlayerOneSymbolDisplay(); });
+symbolThirteenPlayerOne.addEventListener('click', () => { playerOneSymbol = '🐒'; updatePlayerOneSymbolDisplay() });
+symbolFourteenPlayerOne.addEventListener('click', () => { playerOneSymbol = '🦆'; updatePlayerOneSymbolDisplay() });
+symbolFifteenPlayerOne.addEventListener('click', () => { playerOneSymbol = '🌸'; updatePlayerOneSymbolDisplay() });
+symbolSixteenPlayerOne.addEventListener('click', () => { playerOneSymbol = '🍉'; updatePlayerOneSymbolDisplay() });
+
+
+
 
 // Add event listeners to Player Two's symbol choices
 symbolOnePlayerTwo.addEventListener('click', () => { playerTwoSymbol = 'X'; updatePlayerTwoSymbolDisplay(); });
 symbolTwoPlayerTwo.addEventListener('click', () => { playerTwoSymbol = 'O'; updatePlayerTwoSymbolDisplay(); });
-symbolThreePlayerTwo.addEventListener('click', () => { playerTwoSymbol = '👻'; updatePlayerTwoSymbolDisplay(); });
-symbolFourPlayerTwo.addEventListener('click', () => { playerTwoSymbol = '❤️'; updatePlayerTwoSymbolDisplay(); });
-symbolFivePlayerTwo.addEventListener('click', () => { playerTwoSymbol = '☆'; updatePlayerTwoSymbolDisplay(); });
+symbolThreePlayerTwo.addEventListener('click', () => { playerTwoSymbol = '☠'; updatePlayerTwoSymbolDisplay(); });
+symbolFourPlayerTwo.addEventListener('click', () => { playerTwoSymbol = '☆'; updatePlayerTwoSymbolDisplay(); });
+symbolFivePlayerTwo.addEventListener('click', () => { playerTwoSymbol = '❤️'; updatePlayerTwoSymbolDisplay(); });
 symbolSixPlayerTwo.addEventListener('click', () => { playerTwoSymbol = '🥷'; updatePlayerTwoSymbolDisplay(); });
 symbolSevenPlayerTwo.addEventListener('click', () => { playerTwoSymbol = '👽'; updatePlayerTwoSymbolDisplay(); });
 symbolEightPlayerTwo.addEventListener('click', () => { playerTwoSymbol = '🧟‍♂️'; updatePlayerTwoSymbolDisplay(); });
 symbolNinePlayerTwo.addEventListener('click', () => { playerTwoSymbol = '🙀'; updatePlayerTwoSymbolDisplay(); });
-// symbolTenPlayerTwo.addEventListener('click', () => { playerTwoSymbol = '💩'; updatePlayerTwoSymbolDisplay(); });
+symbolTenPlayerTwo.addEventListener('click', () => { playerTwoSymbol = '💩'; updatePlayerTwoSymbolDisplay(); });
 symbolElevenPlayerTwo.addEventListener('click', () => { playerTwoSymbol = '😼'; updatePlayerTwoSymbolDisplay(); });
-symbolTwelvePlayerTwo.addEventListener('click', () => { playerTwoSymbol = '☠'; updatePlayerTwoSymbolDisplay(); });
-
-
-
-
+symbolTwelvePlayerTwo.addEventListener('click', () => { playerTwoSymbol = '👻'; updatePlayerTwoSymbolDisplay(); });
+symbolThirteenPlayerTwo.addEventListener('click', () => { playerTwoSymbol = '🐒'; updatePlayerTwoSymbolDisplay() });
+symbolFourteenPlayerTwo.addEventListener('click', () => { playerTwoSymbol = '🦆'; updatePlayerTwoSymbolDisplay() });
+symbolFifteenPlayerTwo.addEventListener('click', () => { playerTwoSymbol = '🌸'; updatePlayerTwoSymbolDisplay() });
+symbolSixteenPlayerTwo.addEventListener('click', () => { playerTwoSymbol = '🍉'; updatePlayerTwoSymbolDisplay() });
 
 
 
